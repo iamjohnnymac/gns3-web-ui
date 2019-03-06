@@ -69,7 +69,7 @@
     "rxjs-compat": "^6.4.0",
     "tree-kill": "^1.2.1",
     "typeface-roboto": "^0.0.54",
-    "yargs": "^13.2.1",
+    "yargs": "^13.2.2",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
