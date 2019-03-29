@@ -42,6 +42,7 @@ import { MapLabelToLabelConverter } from '../../cartography/converters/map/map-l
 import { RecentlyOpenedProjectService } from '../../services/recentlyOpenedProject.service';
 import { MapLink } from '../../cartography/models/map/map-link';
 import { MapLinkToLinkConverter } from '../../cartography/converters/map/map-link-to-link-converter';
+import * as svg from 'save-svg-as-png';
 
 
 @Component({
@@ -377,6 +378,14 @@ export class ProjectMapComponent implements OnInit, OnDestroy {
         
     imageToUpload.onload = () => { fileReader.readAsDataURL(file) };
     imageToUpload.src = window.URL.createObjectURL(file);
+  }
+
+  public takeScreenshot() {
+    // var canvas = document.getElementsByClassName("canvas")[0] as HTMLCanvasElement;
+    // var img = canvas.toDataURL("image/png");
+    // window.location.href = img;
+
+    svg.saveSvgAsPng(document.getElementsByTagName("svg")[0], "plot.png");
   }
 
   public ngOnDestroy() {

@@ -51,7 +51,7 @@ export class D3MapComponent implements OnInit, OnChanges, OnDestroy {
   @ViewChild('textEditor') textEditor: TextEditorComponent;
 
   private parentNativeElement: any;
-  private svg: Selection<SVGSVGElement, any, null, undefined>;
+  public svg: Selection<SVGSVGElement, any, null, undefined>;
 
   private onChangesDetected: Subscription;
   private subscriptions: Subscription[] = [];
